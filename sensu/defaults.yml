@@ -1,0 +1,33 @@
+# vim: ft=yaml
+# Defaults for sensu
+
+sensu:
+  enabled: false
+  pkg: sensu
+  enterprise: false
+  uchiwa: false
+  dashconf:
+    uchiwa: {}
+  conf:
+    client: {}
+    transport: {}
+    api: {}
+    redis: {}
+    rabbitmq: {}
+  service:
+    client:
+      name: sensu-client
+      state: dead
+      enable: false
+    api:
+      name: sensu-api
+      state: dead
+      enable: false
+    server:
+      name: sensu-server
+      state: dead
+      enable: false
+    uchiwa:
+      name: uchiwa
+      state: dead
+      enable: false
