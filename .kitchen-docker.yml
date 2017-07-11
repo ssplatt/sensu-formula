@@ -5,13 +5,14 @@ driver:
 
 provisioner:
   name: salt_solo
-  formula: sensu
+  is_file_root: true
   salt_copy_filter:
     - .kitchen
     - .git
   state_top:
     base:
       "*":
+        - test.mockup
         - sensu
 
 platforms:
