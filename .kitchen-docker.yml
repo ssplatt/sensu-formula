@@ -1,7 +1,7 @@
 # vim: ft=yaml
 ---
 driver:
-  name: linode
+  name: docker
 
 provisioner:
   name: salt_solo
