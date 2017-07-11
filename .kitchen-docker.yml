@@ -1,18 +1,22 @@
 # vim: ft=yaml
 ---
 driver:
-  name: linode
+  name: docker
 
 provisioner:
   name: salt_solo
-  formula: sensu
+  is_file_root: true
+  salt_copy_filter:
+    - .kitchen
+    - .git
   state_top:
     base:
       "*":
+        - test.mockup
         - sensu
 
 platforms:
-  - name: debian_jessie
+  - name: debian-8
 
 suites:
   - name: default
