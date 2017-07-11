@@ -15,7 +15,7 @@ provisioner:
         - sensu
 
 platforms:
-  - name: debian_jessie
+  - name: debian-8
 
 suites:
   - name: default
