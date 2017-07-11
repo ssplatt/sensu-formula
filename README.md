@@ -1,4 +1,5 @@
 # sensu-formula
+[![Build Status](https://travis-ci.org/ssplatt/sensu-formula.svg?branch=master)](https://travis-ci.org/ssplatt/sensu-formula)
 
 "Monitoring that doesn't suck." https://sensuapp.org/
 
