@@ -6,6 +6,9 @@ driver:
 provisioner:
   name: salt_solo
   is_file_root: true
+  salt_copy_filter:
+    - .kitchen
+    - .git
   state_top:
     base:
       "*":
@@ -13,7 +16,7 @@ provisioner:
         - sensu
 
 platforms:
-  - name: bento/debian-8.6
+  - name: bento/debian-8.7
 
 suites:
   - name: default
@@ -27,4 +30,3 @@ suites:
           base:
             "*":
               - sensu
-

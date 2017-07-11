@@ -6,6 +6,9 @@ driver:
 provisioner:
   name: salt_solo
   formula: sensu
+  salt_copy_filter:
+    - .kitchen
+    - .git
   state_top:
     base:
       "*":
